@@ -1,6 +1,7 @@
-Update VALID UNTIL after change password
+# Update VALID UNTIL after change password
 
 
+# Creating a function
 ```sql
 CREATE OR REPLACE FUNCTION change_own_password(newpassword TEXT)
 RETURNS void
@@ -18,10 +19,16 @@ BEGIN
 END $$;
 ```
 
+## Setting permissions:
 ```sql
 GRANT EXECUTE ON FUNCTION change_own_password(TEXT) TO public;
 ```
 
+## I'm testing password change and updates VALID UNTIL:
+
 ```sql
-SELECT change_own_password('test2');
+SELECT change_own_password('teestttttT0@');
 ```
+
+
+
